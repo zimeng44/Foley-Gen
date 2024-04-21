@@ -20,11 +20,11 @@ from vqvae import VQVAE
 class_id_dict: dict = {
     0: "DogBark",
     1: "Footstep",
-    2: "GunShot",
+    2: "Gunshot",
     3: "Keyboard",
     4: "MovingMotorVehicle",
     5: "Rain",
-    6: "Sneeze_Cough",
+    6: "SneezeCough",
 }
 
 
@@ -45,11 +45,11 @@ class DCASE2023FoleySoundSynthesis:
         self.class_id_dict: dict = {
             0: "DogBark",
             1: "Footstep",
-            2: "GunShot",
+            2: "Gunshot",
             3: "Keyboard",
             4: "MovingMotorVehicle",
             5: "Rain",
-            6: "Sneeze_Cough",
+            6: "SneezeCough",
         }
         self.sr: int = 22050
         self.save_dir: str = "./synthesized"
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     start = time.time()
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--vqvae_checkpoint", type=str, default="./checkpoint/vqvae/vqvae.pth"
+        "--vqvae_checkpoint", type=str, default="./checkpoint/vqvae/vqvae_epoch.pt"
     )
     parser.add_argument(
         "--pixelsnail_checkpoint",
