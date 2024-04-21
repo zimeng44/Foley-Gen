@@ -44,14 +44,14 @@ def extract(lmdb_env, loader, model, device):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--vqvae_checkpoint', type=str, default='./checkpoint/vqvae/vqvae.pth'
+        '--vqvae_checkpoint', type=str, default='./checkpoint/vqvae/vqvae_epoch.pt'
     )
     parser.add_argument('--name', type=str, default='vqvae-code')
     parser.add_argument(
         "--dataset_splits", type=str, default="./dataset_splits.csv"
     )
     parser.add_argument(
-        "--vqvae_config", type=str, default="./configs/vqvae_config_v0.json"
+        "--vqvae_config", type=str, default="./configs/vqvae_config_v2_big.json"
     )
     parser.add_argument("--mel_only", action="store_true", default=False, help="Do not use cembed")
     parser.add_argument("--batch_size", type=int, default=16)
@@ -90,7 +90,8 @@ if __name__ == '__main__':
 
     model = VQVAE(**config)
     checkpoint = torch.load(args.vqvae_checkpoint, map_location='cpu')
-    model.load_state_dict(checkpoint["model"])
+
+    model.load_state_dict(checkpoint["model"], strict=False)
     model = model.to(device)
     model.eval()
 
