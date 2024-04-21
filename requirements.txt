@@ -1,5 +1,6 @@
 librosa
 lmdb
+matplotlib
 nnAudio
 torchinfo
 tqdm
