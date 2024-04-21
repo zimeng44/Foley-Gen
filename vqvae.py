@@ -205,11 +205,11 @@ class VQVAE(nn.Module):
     def __init__(
             self,
             in_channel=1,  # for mel-spec.
-            channel=256,
-            n_res_block=3,
-            n_res_channel=64,
-            embed_dim=128,
-            n_embed=1024,
+            channel=128,
+            n_res_block=2,
+            n_res_channel=32,
+            embed_dim=64,
+            n_embed=512,
             decay=0.99,
             n_classes=None,
     ):

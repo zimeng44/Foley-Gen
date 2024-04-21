@@ -51,7 +51,7 @@ if __name__ == '__main__':
         "--dataset_splits", type=str, default="./dataset_splits.csv"
     )
     parser.add_argument(
-        "--vqvae_config", type=str, default="./configs/vqvae_config_v2_big.json"
+        "--vqvae_config", type=str, default="./configs/vqvae_config_v0.json"
     )
     parser.add_argument("--mel_only", action="store_true", default=False, help="Do not use cembed")
     parser.add_argument("--batch_size", type=int, default=16)

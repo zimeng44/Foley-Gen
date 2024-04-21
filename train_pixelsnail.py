@@ -215,7 +215,7 @@ class PixelTransform:
 if __name__ == "__main__":
     os.makedirs("checkpoint/pixelsnail-final", exist_ok=True)
     parser = argparse.ArgumentParser()
-    parser.add_argument("--batch", type=int, default=8)
+    parser.add_argument("--batch", type=int, default=4)
     parser.add_argument("--epoch", type=int, default=1500)
     parser.add_argument("--hier", type=str, default="bottom")
     parser.add_argument("--lr", type=float, default=None)
@@ -380,7 +380,7 @@ if __name__ == "__main__":
     if reset_lr:
         optimizer.param_groups[0]["lr"] = args.lr
 
-    model = nn.DataParallel(model)
+    # model = nn.DataParallel(model)
     model = model.to(device)
 
     for batch in train_loader:
