@@ -1,4 +1,4 @@
-Run these commands in the set order
+Run these commands in the set order in terminal:
 
 1. cd dl4m-final
 2. pip install -r requirements.txt
