@@ -332,7 +332,7 @@ if __name__ == "__main__":
             args.sched = sched
         
         if args.lr is None:
-            args.lr = 1e-4
+            args.lr = 1e-5
         
         if args.sched is None:
             args.sched = "cycle"
@@ -341,7 +341,7 @@ if __name__ == "__main__":
         print(f"Resuming from args: {args}")
     else:
         if args.lr is None:
-            args.lr = 1e-4
+            args.lr = 1e-5
 
     if model_config_dict is None:
         model = PixelSNAIL(
