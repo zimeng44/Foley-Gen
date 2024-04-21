@@ -88,7 +88,7 @@ if __name__ == '__main__':
         val_loader = DataLoader(val_set, batch_size=args.batch_size, sampler=None, num_workers=2, collate_fn=val_set.collate_augment)
         test_loader = DataLoader(test_set, batch_size=args.batch_size, sampler=None, num_workers=2, collate_fn=test_set.collate_augment)
 
-    model = VQVAE(**config, n_classes=7)
+    model = VQVAE(**config)
     checkpoint = torch.load(args.vqvae_checkpoint, map_location='cpu')
     model.load_state_dict(checkpoint["model"])
     model = model.to(device)
