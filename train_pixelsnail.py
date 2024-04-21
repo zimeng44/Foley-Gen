@@ -488,7 +488,7 @@ if __name__ == "__main__":
         # best_checkpoint_save_path = "checkpoint/pixelsnail-final/bottom_best.pt"
 
         checkpoint_dict = {
-            "model": model.module.state_dict(),
+            "model": model.state_dict(),
             "args": args,
             "epoch": i,
             "optimizer": optimizer.state_dict(),
