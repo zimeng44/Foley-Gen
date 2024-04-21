@@ -193,7 +193,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--batch_size", type=int, default=16)
     parser.add_argument("--vqvae_config", type=str, default=None)
-    parser.add_argument("--pixelsnail_config", type=str, default="./configs/pixelsnail_config_V1.jason")
+    parser.add_argument("--pixelsnail_config", type=str, default="./configs/pixelsnail_config_V1.json")
     parser.add_argument("--hifigan_config", type=str, default=None)
 
     args = parser.parse_args()
