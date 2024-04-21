@@ -741,7 +741,7 @@ if __name__ == '__main__':
     #     cond_res_channel = 0
     # )
 
-    model = nn.DataParallel(model)
+    # model = nn.DataParallel(model)
     model = model.to(device)
 
     for i, (bottom, class_id, salience, file_name) in enumerate(loader):
