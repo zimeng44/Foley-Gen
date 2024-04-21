@@ -110,7 +110,7 @@ class BaseLineModel(SoundSynthesisModel):
         self.pixel_snail_config = load_config(pixel_snail_config)
         self.pixel_snail = PixelSNAIL(**self.pixel_snail_config)
         self.pixel_snail.load_state_dict(
-            torch.load(pixel_snail_checkpoint, map_location="cpu")["model"]
+            torch.load(pixel_snail_checkpoint, map_location="cpu")["model"], strict=False
         )
         self.pixel_snail.cuda()
         self.pixel_snail.eval()
@@ -119,7 +119,7 @@ class BaseLineModel(SoundSynthesisModel):
         self.vqvae_config = load_config(vqvae_config)
         self.vqvae = VQVAE(**self.vqvae_config)
         self.vqvae.load_state_dict(
-            torch.load(vqvae_checkpoint, map_location="cpu")["model"]
+            torch.load(vqvae_checkpoint, map_location="cpu")["model"], strict=False
         )
         self.vqvae.cuda()
         self.vqvae.eval()
@@ -189,12 +189,12 @@ if __name__ == "__main__":
         "--hifigan_checkpoint", type=str, default="./checkpoint/hifigan/g_00935000"
     )
     parser.add_argument(
-        "--number_of_synthesized_sound_per_class", type=int, default=100
+        "--number_of_synthesized_sound_per_class", type=int, default=3
     )
     parser.add_argument("--batch_size", type=int, default=16)
-    parser.add_argument("--vqvae_config", type=str, default=None)
-    parser.add_argument("--pixelsnail_config", type=str, default="./configs/pixelsnail_config_v1.json")
-    parser.add_argument("--hifigan_config", type=str, default=None)
+    parser.add_argument("--vqvae_config", type=str, default="./configs/vqvae_config_v0.json")
+    parser.add_argument("--pixelsnail_config", type=str, default="./configs/pixelsnail_config_v3.json")
+    parser.add_argument("--hifigan_config", type=str, default="./checkpoint/hifigan/config_hifigan_cembed.json")
 
     args = parser.parse_args()
     dcase_2023_foley_sound_synthesis = DCASE2023FoleySoundSynthesis(
