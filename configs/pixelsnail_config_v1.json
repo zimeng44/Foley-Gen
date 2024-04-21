@@ -1,0 +1,19 @@
+{
+    "shape": [288, 75],
+    "n_class": 512,
+    "channel": 128,
+    "kernel_size": 5,
+    "n_block": 4,
+    "n_res_block": 3,
+    "res_channel": 256,
+    "attention": true,
+    "dropout": 0.1,
+    "n_cond_res_block": 3,
+    "cond_res_channel": 256,
+    "cond_res_kernel": 3,
+    "n_out_res_block": 0,
+    "cond_embed_channel": 1,
+    "n_label": 7,
+    "embed_dim": 2048,
+    "use_skip_connect": true
+}

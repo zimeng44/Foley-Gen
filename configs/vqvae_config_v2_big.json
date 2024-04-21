@@ -1,0 +1,10 @@
+{
+    "in_channel": 1,
+    "channel": 256,
+    "n_res_block": 3,
+    "n_res_channel": 64,
+    "embed_dim": 128,
+    "n_embed": 1024,
+    "decay": 0.99,
+    "n_classes": 7
+}

@@ -1,0 +1,28 @@
+name: dcase_task7
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.16
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - torchaudio=0.13.1
+  - pytorch-cuda=11.7
+  - transformers
+  - tokenizers=0.11.4
+  - librosa
+  - wandb
+  - tqdm
+  - tensorboard
+  - scipy
+  - scikit-learn
+  - numpy
+  - matplotlib
+  - nb_conda_kernels
+  - ipykernel
+  - ipywidgets
+  - pip:
+    - nnaudio
+    - torchinfo
