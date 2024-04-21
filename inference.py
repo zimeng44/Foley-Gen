@@ -183,7 +183,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--pixelsnail_checkpoint",
         type=str,
-        default="./checkpoint/pixelsnail-final/bottom_1400.pt",
+        default="./checkpoint/pixelsnail-final/bottom_latest.pt",
     )
     parser.add_argument(
         "--hifigan_checkpoint", type=str, default="./checkpoint/hifigan/g_00935000"
