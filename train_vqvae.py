@@ -444,7 +444,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--epoch", type=int, default=800)
     parser.add_argument("--lr", type=float, default=3e-4)
-    parser.add_argument("--batch", type=int, default=512)
+    parser.add_argument("--batch", type=int, default=32)
     parser.add_argument("--sched", type=str, default='ca')
     parser.add_argument("--ckpt", type=str)
     parser.add_argument("--latent_loss_weight", type=float, default=0.25)
