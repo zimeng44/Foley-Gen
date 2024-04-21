@@ -1,6 +1,7 @@
 librosa
 lmdb
 nnAudio
+torchinfo
 tqdm
 transformers
 wandb
