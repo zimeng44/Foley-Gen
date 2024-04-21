@@ -10,7 +10,7 @@
     "reset_scheduler": true,
     "seed": 1234,
 
-    "height": 1152,
+    "height": 80,
     "upsample_rates": [10, 8, 2, 2],
     "upsample_kernel_sizes": [16, 16, 4, 4],
     "upsample_initial_channel": 512,
