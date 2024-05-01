@@ -1,8 +1,21 @@
+Recommended Environment: Python 3.10
+
 Run these commands in the set order in terminal:
 
-1. cd dl4m-final
-2. pip install -r requirements.txt
-3. python train_vqvae.py
-4. python extract_code.py
-5. python train_pixelsnail.py
-6. python inference.py
+1. Go to the project folder:
+   cd dl4m-final
+   
+3. Install required packages:
+   pip install -r requirements.txt
+   
+4. Train VQ-VAE:
+   python train_vqvae.py
+   
+5. Extract code/embedding from trained VQ-VAE:
+   python extract_code.py
+   
+6. Train PixelSnail:
+   python train_pixelsnail.py
+    
+8. Inference:
+   python inference.py
