@@ -6,6 +6,7 @@ import os
 import time
 from abc import ABC, abstractmethod
 from typing import List
+import numpy as np
 
 import librosa
 import soundfile as sf
@@ -152,7 +153,7 @@ class BaseLineModel(SoundSynthesisModel):
                     )
                     prob: Tensor = torch.softmax(out[:, :, i, j], 1)
                     vq_token[:, i, j] = torch.multinomial(prob, 1).squeeze(-1)
-
+                torch.cuda.empty_cache()
             # torch.save(vq_token, f"./synthesized/{class_name}/vq_token.pt")
             pred_mel = self.vqvae.decode_code(vq_token).detach()
             # torch.save(pred_mel, f"./synthesized/{class_name}/pred_cembed.pt")
@@ -163,6 +164,8 @@ class BaseLineModel(SoundSynthesisModel):
 
         if self.sr != self.hifigan_config["sampling_rate"]:
             for i, audio in enumerate(audio_list):
+                audio = [a.item() for a in audio]
+                audio = np.array(audio)
                 audio_list[i] = librosa.resample(
                     audio,
                     orig_sr=self.hifigan_config["sampling_rate"],
@@ -178,7 +181,7 @@ if __name__ == "__main__":
     start = time.time()
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--vqvae_checkpoint", type=str, default="./checkpoint/vqvae/vqvae_epoch.pt"
+        "--vqvae_checkpoint", type=str, default="./checkpoint/vqvae/vqvae_min_avgl.pt"
     )
     parser.add_argument(
         "--pixelsnail_checkpoint",
@@ -189,9 +192,9 @@ if __name__ == "__main__":
         "--hifigan_checkpoint", type=str, default="./checkpoint/hifigan/g_00935000"
     )
     parser.add_argument(
-        "--number_of_synthesized_sound_per_class", type=int, default=3
+        "--number_of_synthesized_sound_per_class", type=int, default=1
     )
-    parser.add_argument("--batch_size", type=int, default=16)
+    parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--vqvae_config", type=str, default="./configs/vqvae_config_v0.json")
     parser.add_argument("--pixelsnail_config", type=str, default="./configs/pixelsnail_config_v3.json")
     parser.add_argument("--hifigan_config", type=str, default="./checkpoint/hifigan/config_hifigan_cembed.json")

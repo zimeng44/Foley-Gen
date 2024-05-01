@@ -135,13 +135,13 @@ def train(
         if scaler is not None:
             scaler.scale(loss).backward()
             if max_gradient_norm is not None:
-                torch.nn.utils.clip_grad_norm_(model.parameters(), max_gradient_norm)
+                torch.nn.utils.clip_grad_norm_(model.module.parameters(), max_gradient_norm)
             scaler.step(optimizer)
             scaler.update()
         else:
             loss.backward()
             if max_gradient_norm is not None:
-                torch.nn.utils.clip_grad_norm_(model.parameters(), max_gradient_norm)
+                torch.nn.utils.clip_grad_norm_(model.module.parameters(), max_gradient_norm)
             optimizer.step()
         if scheduler is not None and isinstance(scheduler, CycleScheduler):
             scheduler.step(avg_loss)
@@ -215,8 +215,8 @@ class PixelTransform:
 if __name__ == "__main__":
     os.makedirs("checkpoint/pixelsnail-final", exist_ok=True)
     parser = argparse.ArgumentParser()
-    parser.add_argument("--batch", type=int, default=4)
-    parser.add_argument("--epoch", type=int, default=1500)
+    parser.add_argument("--batch", type=int, default=2)
+    parser.add_argument("--epoch", type=int, default=20)
     parser.add_argument("--hier", type=str, default="bottom")
     parser.add_argument("--lr", type=float, default=None)
     parser.add_argument("--channel", type=int, default=256)
@@ -380,7 +380,7 @@ if __name__ == "__main__":
     if reset_lr:
         optimizer.param_groups[0]["lr"] = args.lr
 
-    # model = nn.DataParallel(model)
+    model = nn.DataParallel(model)
     model = model.to(device)
 
     for batch in train_loader:

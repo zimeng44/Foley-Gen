@@ -44,7 +44,7 @@ def extract(lmdb_env, loader, model, device):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--vqvae_checkpoint', type=str, default='./checkpoint/vqvae/vqvae_epoch.pt'
+        '--vqvae_checkpoint', type=str, default='./checkpoint/vqvae/vqvae_min_avgl.pt'
     )
     parser.add_argument('--name', type=str, default='vqvae-code')
     parser.add_argument(
