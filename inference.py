@@ -35,7 +35,7 @@ class SoundSynthesisModel(ABC):
         raise NotImplementedError
 
 
-class DCASE2023FoleySoundSynthesis:
+class FoleyGen:
     def __init__(
         self, number_of_synthesized_sound_per_class: int = 100, batch_size: int = 16
     ) -> None:
@@ -200,7 +200,7 @@ if __name__ == "__main__":
     parser.add_argument("--hifigan_config", type=str, default="./checkpoint/hifigan/config_hifigan_cembed.json")
 
     args = parser.parse_args()
-    dcase_2023_foley_sound_synthesis = DCASE2023FoleySoundSynthesis(
+    dcase_2023_foley_sound_synthesis = FoleyGen(
         args.number_of_synthesized_sound_per_class, args.batch_size
     )
 
