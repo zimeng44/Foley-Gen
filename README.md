@@ -33,3 +33,5 @@ If you want to train the models yourself:
 The synthesized sound samples will be saved to `./synthesized`
 
 Reference: This project is based on a baseline model https://github.com/DCASE2023-Task7-Foley-Sound-Synthesis/dcase2023_task7_baseline . Other models used in this project include MERT, VQ-VAE and PixelSnail.
+
+Caution: Inference needs GPU with memory larger than 50GB, otherwise, 'CUDA Out of Memory' error might occur. 
