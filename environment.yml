@@ -1,4 +1,4 @@
-name: cloudspace
+name: foley-gen
 channels:
   - defaults
 dependencies:
@@ -230,4 +230,4 @@ dependencies:
       - werkzeug==3.0.2
       - widgetsnbextension==4.0.10
       - yarl==1.9.4
-prefix: /home/zeus/miniconda3/envs/cloudspace
+prefix: /home/zeus/miniconda3/envs/foley-gen
