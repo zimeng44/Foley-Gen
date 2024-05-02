@@ -1,9 +1,5 @@
 Usage:
 
-Recommended Environment: Python 3.10
-
-Run these commands in the set order in terminal:
-
 1. Go to the project folder:
    cd dl4m-final
    
