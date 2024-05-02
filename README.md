@@ -21,3 +21,5 @@ Unzip the checkpoint and put the 'checkpoint' folder at the root level of this p
     
 8. Inference:
    python inference.py
+
+Reference: This project is based on a baseline model https://github.com/DCASE2023-Task7-Foley-Sound-Synthesis/dcase2023_task7_baseline
