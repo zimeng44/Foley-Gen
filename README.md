@@ -1,6 +1,6 @@
 Usage:
 
-Preparation: Download checkpoint here: https://drive.google.com/file/d/1hLbUi0veQ1D-yYGTxF-3rCfrVSIpzd6_/view?usp=sharing
+Preparation: download checkpoint here: https://drive.google.com/file/d/1hLbUi0veQ1D-yYGTxF-3rCfrVSIpzd6_/view?usp=sharing
 
 Unzip the checkpoint and put the 'checkpoint' folder at the root level of this project.
 
