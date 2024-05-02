@@ -122,7 +122,7 @@ def get_dataset_filelist(num_valid, num_test, seed=0):
     training_files: List[dict] = list()
     valid_files: List[dict] = list()
     test_files: List[dict] = list()
-    categories = [f.path for f in os.scandir("./DataSet") if f.is_dir()]
+    categories = [f.path for f in os.scandir("./dataset") if f.is_dir()]
 
     with open("dataset_splits.csv", "w+") as f:
         f.write("filepath,split\n")
