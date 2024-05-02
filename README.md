@@ -1,10 +1,10 @@
-Introduction:
+##Introduction:
 
 Foley-Gen is a generative machine learning model that generates noval foley sounds in 7 categories: Dog Bark, Footstep, Gunshot, Typing on Keyboard, Moving Motor Vehicle, Rain, Sneeze Cough. Each time the model runs, foley sounds in all 7 categories will be generated and saved to `./synthesized`. 
 
-Usage:
+##Usage:
 
-If you want to use our checkpoint you can: 
+###If you want to use our checkpoint you can: 
 
 1. Download the checkpoint here: https://drive.google.com/file/d/1hLbUi0veQ1D-yYGTxF-3rCfrVSIpzd6_/view?usp=sharing
 
@@ -17,7 +17,7 @@ The synthesized sound samples will be saved to `./synthesized`
    
 ========================================================================
 
-If you want to train the models yourself:
+###If you want to train the models yourself:
 
 1. Train VQ-VAE:
    python train_vqvae.py
@@ -34,6 +34,6 @@ If you want to train the models yourself:
 
 The synthesized sound samples will be saved to `./synthesized`
 
-Caution: Inference needs GPU with memory larger than 50GB, otherwise, 'CUDA Out of Memory' error might occur. 
+##Caution: Inference needs GPU with memory larger than 50GB, otherwise, 'CUDA Out of Memory' error might occur. 
 
-Reference: This project is based on a baseline model https://github.com/DCASE2023-Task7-Foley-Sound-Synthesis/dcase2023_task7_baseline . Other models used in this project include MERT, VQ-VAE and PixelSnail.
+##Reference: This project is based on a baseline model https://github.com/DCASE2023-Task7-Foley-Sound-Synthesis/dcase2023_task7_baseline . Other models used in this project include MERT, VQ-VAE and PixelSnail.
