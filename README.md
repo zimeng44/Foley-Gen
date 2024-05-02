@@ -1,6 +1,6 @@
 ## Introduction:
 
-Foley-Gen is a generative machine learning model that generates noval foley sounds in 7 categories: Dog Bark, Footstep, Gunshot, Typing on Keyboard, Moving Motor Vehicle, Rain, Sneeze Cough. 
+Foley-Gen is a generative machine learning model that generates noval foley sounds in 7 categories: Dog Bark, Footstep, Gunshot, Typing on Keyboard, Moving Motor Vehicle, Rain, Sneeze Cough. Our training dataset consists of 5,496 sound clips from the UrbanSound8K, FSD50K, and BBC Sound Effects datasets.
 
 ## Usage:
 
@@ -35,4 +35,5 @@ The synthesized sound samples will be saved to `./synthesized`
 ## Caution: Inference needs GPU with memory larger than 50GB, otherwise, 'CUDA Out of Memory' error might occur. 
 
 ## Reference: 
-This project is based on a baseline model https://github.com/DCASE2023-Task7-Foley-Sound-Synthesis/dcase2023_task7_baseline . Other models used in this project include MERT, VQ-VAE and PixelSnail.
+This project is based on a baseline model https://github.com/DCASE2023-Task7-Foley-Sound-Synthesis/dcase2023_task7_baseline .
+Other models used in this project include MERT, VQ-VAE and PixelSnail.
