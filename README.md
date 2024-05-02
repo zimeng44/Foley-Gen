@@ -1,6 +1,6 @@
 Introduction:
 
-Foley-Gen is a generative machine learning model that generates noval foley sounds in 7 categories: Dog Bark, Footstep, Gunshot, Typing on Keyboard, Moving Motor Vehicle, Rain, Sneeze Cough. Each time the model runs, foley sounds in all 7 categories will be generated and saved to `./synthesized`. The number of sounds that will be generated for each category can be modified by running inference.py with '--number_of_synthesized_sound_per_class = < number >'. The default number is 1 per category.
+Foley-Gen is a generative machine learning model that generates noval foley sounds in 7 categories: Dog Bark, Footstep, Gunshot, Typing on Keyboard, Moving Motor Vehicle, Rain, Sneeze Cough. Each time the model runs, foley sounds in all 7 categories will be generated and saved to `./synthesized`. 
 
 Usage:
 
@@ -11,6 +11,7 @@ If you want to use our checkpoint you can:
 2. Unzip the checkpoint and put the 'checkpoint' folder at the root level of this project.
 
 3. Run 'python inference.py'
+   The number of sounds that will be generated for each category can be modified by running inference.py with '--number_of_synthesized_sound_per_class = < number >'. The default number is 1 per category.
 
 The synthesized sound samples will be saved to `./synthesized`
    
@@ -29,6 +30,7 @@ If you want to train the models yourself:
     
 4. Inference:
    python inference.py
+   The number of sounds that will be generated for each category can be modified by running inference.py with '--number_of_synthesized_sound_per_class = < number >'. The default number is 1 per category.
 
 The synthesized sound samples will be saved to `./synthesized`
 
