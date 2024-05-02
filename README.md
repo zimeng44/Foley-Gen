@@ -1,6 +1,6 @@
 ## Introduction:
 
-Foley-Gen is a generative machine learning model that generates noval foley sounds in 7 categories: Dog Bark, Footstep, Gunshot, Typing on Keyboard, Moving Motor Vehicle, Rain, Sneeze Cough. In each inference, foley sounds in all 7 categories will be generated and saved to `./synthesized`. 
+Foley-Gen is a generative machine learning model that generates noval foley sounds in 7 categories: Dog Bark, Footstep, Gunshot, Typing on Keyboard, Moving Motor Vehicle, Rain, Sneeze Cough. 
 
 ## Usage:
 
