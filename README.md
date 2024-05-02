@@ -10,25 +10,25 @@ Foley-Gen is a generative machine learning model that generates noval foley soun
 
 2. Unzip the checkpoint and put the 'checkpoint' folder at the root level of this project.
 
-3. Run 'python inference.py'
+3. Run `python inference.py`
    
-   (The number of sounds that will be generated for each category can be modified by running inference.py with '--number_of_synthesized_sound_per_class = < number >'. The default number is 1 per category.)
+   (The number of sounds that will be generated for each category can be modified by running `inference.py` with `--number_of_synthesized_sound_per_class = < number >`. The default number is 1 per category.)
 
 ### If you want to train the models yourself:
 
 1. Train VQ-VAE:
-   python train_vqvae.py
+   `python train_vqvae.py`
    
 2. Extract code/embedding from trained VQ-VAE:
-   python extract_code.py
+   `python extract_code.py`
    
 3. Train PixelSnail:
-   python train_pixelsnail.py
+   `python train_pixelsnail.py`
     
 4. Inference:
-   python inference.py
+   `python inference.py`
 
-   (The number of sounds that will be generated for each category can be modified by running inference.py with '--number_of_synthesized_sound_per_class = < number >'. The default number is 1 per category.)
+   (The number of sounds that will be generated for each category can be modified by running `inference.py` with `--number_of_synthesized_sound_per_class = < number >`. The default number is 1 per category.)
 
 The synthesized sound samples will be saved to `./synthesized`
 
