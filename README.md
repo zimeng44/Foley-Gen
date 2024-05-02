@@ -12,7 +12,7 @@ Foley-Gen is a generative machine learning model that generates noval foley soun
 
 3. Run `python inference.py`
    
-   (The number of sounds that will be generated for each category can be modified by running `python inference.py --number_of_synthesized_sound_per_class = < number >`. The default number is 1 per category.)
+   (The number of sounds that will be generated for each category can be modified by running `python inference.py --number_of_synthesized_sound_per_class = <number>`. The default number is 1 per category.)
 
 ### If you want to train the models yourself:
 
@@ -28,7 +28,7 @@ Foley-Gen is a generative machine learning model that generates noval foley soun
 4. Inference:
    `python inference.py`
 
-   (The number of sounds that will be generated for each category can be modified by running `python inference.py --number_of_synthesized_sound_per_class = < number >`. The default number is 1 per category.)
+   (The number of sounds that will be generated for each category can be modified by running `python inference.py --number_of_synthesized_sound_per_class = <number>`. The default number is 1 per category.)
 
 The synthesized sound samples will be saved to `./synthesized`
 
