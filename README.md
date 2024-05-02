@@ -1,10 +1,18 @@
 Usage:
 
-Preparation: download the checkpoint here: https://drive.google.com/file/d/1hLbUi0veQ1D-yYGTxF-3rCfrVSIpzd6_/view?usp=sharing
+If you want to use our checkpoint you can:
 
-Unzip the checkpoint and put the 'checkpoint' folder at the root level of this project.
+1. Download the checkpoint here: https://drive.google.com/file/d/1hLbUi0veQ1D-yYGTxF-3rCfrVSIpzd6_/view?usp=sharing
 
-Running Commands:
+2. Unzip the checkpoint and put the 'checkpoint' folder at the root level of this project.
+
+3. Run 'python inference.py'
+
+The synthesized sound samples will be saved to `./synthesized`
+   
+============================================================================================================
+
+If you want to train the models yourself:
 
 1. Train VQ-VAE:
    python train_vqvae.py
