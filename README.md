@@ -14,7 +14,7 @@ If you want to use our checkpoint you can:
 
 The synthesized sound samples will be saved to `./synthesized`
    
-============================================================================================================
+========================================================================
 
 If you want to train the models yourself:
 
